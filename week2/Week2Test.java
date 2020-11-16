@@ -107,15 +107,8 @@ public class Week2Test {
 	@Test
 	public void CheckingTrue() {
 	Object obj1 = new Object();
-	Object obj2 = obj1;
-	assertTrue(obj1 == obj2);
-	}
-	// Or if we just want to check if they use the same class
-	@Test
-	public void CheckingTrue2() {
-	Object obj1 = new Object();
 	Object obj2 = new Object();
-	assertTrue(obj1.getClass().equals(obj2.getClass()));
+	assertFalse(obj1 == obj2);
 	}
 	
 	// question 10
@@ -124,14 +117,7 @@ public class Week2Test {
 	public void CheckingFalse() {
 	Object obj1 = new Object();
 	Object obj2 = new Object();
-	assertFalse(obj1 == obj2);
-	}
-	// Or
-	@Test
-	public void CheckingFalse2() {
-	Object obj1 = new Object();
-	Object obj2 = obj1;
-	assertFalse(obj1 != obj2);
+	assertTrue(obj1 != obj2);
 	}
 	
 	//Bonus question
